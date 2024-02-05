@@ -14,35 +14,27 @@ public class Producto {
         this.precio = precio;
         this.existencias = existencias;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
     public String getNombre() {
         return this.nombre;
     }
-
     public int getExistencias() {
         return existencias;
     }
-
     public void setExistencias(int existencias) {
         this.existencias = existencias;
     }
-
     public int getId() {
         return id;
     }
-
     public float getPrecio() {
         return precio;
     }
-
     public void setPrecio(float precio) {
         this.precio = precio;
     }
-
 
     @Override
     public String toString() {
@@ -52,5 +44,11 @@ public class Producto {
                 ", precio=" + precio +
                 ", existencias=" + existencias +
                 '}';
+    }
+
+    public void copy(Producto producto) {
+        this.nombre = producto.nombre;
+        this.precio = producto.precio;
+        this.existencias = producto.existencias;
     }
 }

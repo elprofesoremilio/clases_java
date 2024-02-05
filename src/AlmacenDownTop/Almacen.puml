@@ -20,7 +20,8 @@ class Almacén {
     +add(Producto) : int
     +remove(Producto) : int
     +set(Producto) : int
-    +get(Producto) : Producto
+    +get(int) : Producto
+    +get(String) : Producto
     +size() : int
 }
 
