@@ -1,5 +1,6 @@
 package AlmacenDownTop;
 
+import utils.Utils;
 import java.util.Scanner;
 
 public class Vista {
@@ -13,12 +14,7 @@ public class Vista {
             "0. Salir\n" +
             "-----------------------------";
 
-    private static int getOpcionMenu() {
-        System.out.println(textoMenu);
-        String opcion = sc.nextLine();
 
-        return Integer.parseInt(opcion);
-    }
 
     private static int add() {
         System.out.println("Debe indicar los datos del nuevo producto.");
@@ -83,7 +79,7 @@ public class Vista {
 
         int opcion;
         do {
-            opcion = getOpcionMenu();
+            opcion = Utils.getOpcionMenu(textoMenu);
             switch (opcion) {
                 case 1:
                     list();

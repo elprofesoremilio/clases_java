@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Almacen {
-    List<Producto> productos;
+    public List<Producto> productos;
 
     public Almacen() {
         productos = new ArrayList<>();

@@ -46,6 +46,10 @@ public class Producto {
                 '}';
     }
 
+    public void addExistencias(int cantidad) {
+        this.existencias+=cantidad;
+    }
+
     public void copy(Producto producto) {
         this.nombre = producto.nombre;
         this.precio = producto.precio;
