@@ -55,4 +55,8 @@ public class Producto {
         this.precio = producto.precio;
         this.existencias = producto.existencias;
     }
+
+    public void removeExistencias(int cantidad) {
+        this.existencias -= cantidad;
+    }
 }

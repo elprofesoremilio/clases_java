@@ -23,6 +23,8 @@ public class GestionarExistencias {
     }
     public static void main(String[] args) {
         int opcion;
+        String nombre;
+        Producto seleccionado;
         almacen.productos.add(new Producto("Patata bolsa 5kg",1.2f,10));
         almacen.productos.add(new Producto("Pan 1kg",4f,30));
         almacen.productos.add(new Producto("Agua mineral 2L",0.7f,50));
@@ -42,8 +44,8 @@ public class GestionarExistencias {
                     break;
                 case 2:
                     System.out.println("Introduzca el nombre del producto");
-                    String nombre = Utils.scanner.nextLine();
-                    Producto seleccionado = almacen.get(nombre);
+                    nombre = Utils.scanner.nextLine();
+                    seleccionado = almacen.get(nombre);
                     if (seleccionado!=null) {
                         System.out.println("Introduzca la cantidad a añadir: ");
                         int cantidad = Integer.parseInt(Utils.scanner.nextLine());
@@ -68,6 +70,22 @@ public class GestionarExistencias {
                         }
                     }
                     break;
+                case 3:
+                    System.out.println("Indique el nombre del producto al que quitar existencias: ");
+                    nombre = Utils.scanner.nextLine();
+                    seleccionado = almacen.get(nombre);
+
+                    if (seleccionado!=null) {
+                        System.out.println("Introduzca la cantidad de existencias a eliminar: ");
+                        int cantidad = Integer.parseInt(Utils.scanner.nextLine());
+                        if (seleccionado.getExistencias() >= cantidad) {
+                            seleccionado.removeExistencias(cantidad);
+                        } else {
+                            System.out.println("Cantidad de producto insuficiente.");
+                        }
+                    } else {
+                        System.out.println("Producto no encontrado.");
+                    }
                 case 0:
                     System.out.println("Gracias por usar este programa.");
                     break;
