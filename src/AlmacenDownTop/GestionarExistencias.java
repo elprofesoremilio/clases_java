@@ -11,6 +11,8 @@ public class GestionarExistencias {
             "3. Eliminar existencias\n" +
             "0. Salir\n" +
             "---------------------------------------------\n";
+    // El siguiente método añade un producto. Para ello pide sus datos y lo añade al almacén.
+    // TODO: comprobar si el producto existe
     private static Producto add() {
         System.out.println("Debe indicar los datos del nuevo producto.");
         System.out.println("Nombre: ");
