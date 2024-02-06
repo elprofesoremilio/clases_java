@@ -3,7 +3,7 @@ package AlmacenDownTop;
 import utils.Utils;
 import java.util.Scanner;
 
-public class Vista {
+public class GestionarProductos {
     private static Scanner sc = new Scanner(System.in);
     private static Almacen almacen = new Almacen();
     private static String textoMenu =  "---------MENÚ-----------\n" +

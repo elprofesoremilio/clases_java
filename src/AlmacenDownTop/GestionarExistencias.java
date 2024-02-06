@@ -4,14 +4,13 @@ import utils.Utils;
 
 public class GestionarExistencias {
     private static final Almacen almacen = new Almacen();
-    private static final String textoMenu = """
-            ---------------------MENÚ--------------------
-            1. Listar productos con existencias al límite
-            2. Añadir existencias
-            3. Eliminar existencias
-            0. Salir
-            ---------------------------------------------
-            """;
+    private static final String textoMenu =
+            "---------------------MENÚ--------------------\n" +
+            "1. Listar productos con existencias al límite\n" +
+            "2. Añadir existencias\n" +
+            "3. Eliminar existencias\n" +
+            "0. Salir\n" +
+            "---------------------------------------------\n";
     private static Producto add() {
         System.out.println("Debe indicar los datos del nuevo producto.");
         System.out.println("Nombre: ");
