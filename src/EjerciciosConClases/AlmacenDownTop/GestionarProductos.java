@@ -1,4 +1,4 @@
-package AlmacenDownTop;
+package EjerciciosConClases.AlmacenDownTop;
 
 import utils.Utils;
 import java.util.Scanner;

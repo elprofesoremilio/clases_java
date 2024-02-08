@@ -1,4 +1,4 @@
-package AlmacenDownTop;
+package EjerciciosConClases.AlmacenDownTop;
 
 public class Producto {
     private int id;
