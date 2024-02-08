@@ -27,10 +27,10 @@ public class GestionarExistencias {
         int opcion;
         String nombre;
         Producto seleccionado;
-        almacen.productos.add(new Producto("Patata bolsa 5kg",1.2f,10));
-        almacen.productos.add(new Producto("Pan 1kg",4f,30));
-        almacen.productos.add(new Producto("Agua mineral 2L",0.7f,50));
-        almacen.productos.add(new Producto("Cangrejo",10.2f,5));
+        almacen.estanteria.add(new Producto("Patata bolsa 5kg",1.2f,10));
+        almacen.estanteria.add(new Producto("Pan 1kg",4f,30));
+        almacen.estanteria.add(new Producto("Agua mineral 2L",0.7f,50));
+        almacen.estanteria.add(new Producto("Cangrejo",10.2f,5));
         do {
             opcion = Utils.getOpcionMenu(textoMenu);
 
@@ -38,7 +38,7 @@ public class GestionarExistencias {
                 case 1:
                     System.out.println("Introduzca el límite de existencias (0 para listar todos): ");
                     int limite = Integer.parseInt(Utils.scanner.nextLine());
-                    for (Producto producto : almacen.productos) {
+                    for (Producto producto : almacen.estanteria) {
                         if (producto.getExistencias()<=limite || limite<=10) {
                             System.out.println(producto);
                         }

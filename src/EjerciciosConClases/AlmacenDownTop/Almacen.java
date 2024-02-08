@@ -4,27 +4,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Almacen {
-    public List<Producto> productos;
+    public List<Producto> estanteria;
 
     public Almacen() {
-        productos = new ArrayList<>();
+        estanteria = new ArrayList<>();
     }
 
     public int add(Producto producto) {
-        this.productos.add(producto);
+        this.estanteria.add(producto);
         return 0;
     }
 
     public int remove(Producto producto) {
-        if (productos.contains(producto)) {
-            productos.remove(producto);
+        if (estanteria.contains(producto)) {
+            estanteria.remove(producto);
             return 0;
         } else {
             return 1;
         }
     }
     public int set(Producto actual, Producto nuevo) {
-        if (productos.contains(actual)) {
+        if (estanteria.contains(actual)) {
             actual.copy(nuevo);
             return 0;
         } else {
@@ -33,7 +33,7 @@ public class Almacen {
     }
 
     public Producto get(String nombre) {
-        for (Producto producto : productos) {
+        for (Producto producto : estanteria) {
             if (producto.getNombre().equals(nombre)) {
                 return producto;
             }
@@ -41,9 +41,9 @@ public class Almacen {
         return null;
     }
     public Producto get(int index) {
-        return productos.get(index);
+        return estanteria.get(index);
     }
     public int size() {
-        return productos.size();
+        return estanteria.size();
     }
 }
