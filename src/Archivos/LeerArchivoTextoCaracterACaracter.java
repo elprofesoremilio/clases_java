@@ -4,7 +4,8 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class LeerArchivoTexto {
+public class LeerArchivoTextoCaracterACaracter {
+
     public static void main(String[] args) {
         FileReader fr = null;
         try {
