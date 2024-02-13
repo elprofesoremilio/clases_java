@@ -1,38 +1,40 @@
 package EjerciciosConClases.AlmacenDownTop;
 
+import Archivos.Constants;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+
 public class LeerDeArchivo {
 
     public static void main(String[] args) {
-        String cadena = "patata 1.1 100";
+        FileReader fr = null;
+        BufferedReader br = null;
 
-        StringBuilder nombre= new StringBuilder();
-        float precio;
-        int existencias;
+        try {
+            fr = new FileReader(Constants.NOMBRE_ARCHIVO_ESCRITURA);
+            br = new BufferedReader(fr);
 
-        int i=0;
-        while (cadena.charAt(i)!=' ') {
-            nombre.append(cadena.charAt(i));
-            i++;
+            String linea;
+            ArrayList<String> lineasCSV = new ArrayList<>();
+
+            while ((linea = br.readLine())!= null) {
+                if (!linea.isEmpty()) {
+                    lineasCSV.add(linea);
+                }
+            }
+
+            for (String s : lineasCSV) {
+                System.out.println(s);
+            }
+
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-
-        i++;
-        StringBuilder resto= new StringBuilder();
-
-        while (cadena.charAt(i)!=' ') {
-            resto.append(cadena.charAt(i));
-            i++;
-        }
-
-        i++;
-        precio = Float.parseFloat(resto.toString());
-        resto = new StringBuilder();
-
-        for (; i<cadena.length(); i++) {
-            resto.append(cadena.charAt(i));
-        }
-
-        existencias = Integer.parseInt(resto.toString());
-        Producto p = new Producto(nombre.toString(), precio, existencias);
-        System.out.println(p);
     }
 }
