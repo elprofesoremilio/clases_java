@@ -6,7 +6,8 @@ public class GestionBilioteca {
             - Crear biblioteca nueva
             - Cargar biblioteca existente desde archivo
             - Guardar biblioteca actual en archivo
-            - Gestionar libros de la biblioteca
+            - Listar los libros de una biblioteca
+            - Gestionar libros de la biblioteca (añadir, eliminar y modificar libros)
             - Salir
 
             Recomiendo crear el switch y empezar a programar la opción más fácil.
