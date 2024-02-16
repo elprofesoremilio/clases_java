@@ -13,7 +13,7 @@ public class LeerArchivoTextoLineaALinea {
         String linea;
 
         try {
-            fr = new FileReader(Constants.NOMBRE_ARCHIVO);
+            fr = new FileReader(Config.NOMBRE_ARCHIVO);
             br = new BufferedReader(fr);
 
             while ((linea = br.readLine())!=null) {

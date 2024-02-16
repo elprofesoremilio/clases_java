@@ -1,6 +1,6 @@
 package EjerciciosConClases.AlmacenDownTop;
 
-import Archivos.Constants;
+import Archivos.Config;
 
 import java.util.Scanner;
 
@@ -27,10 +27,10 @@ public class GestAlm {
                     almacen = new Almacen();
                     break;
                 case "2":
-                    almacen = GestionCSV.cargarAlmacen(Constants.NOMBRE_ARCHIVO_ESCRITURA);
+                    almacen = GestionCSV.cargarAlmacen(Config.NOMBRE_ARCHIVO_ESCRITURA);
                     break;
                 case "3":
-                    if (GestionCSV.escribirAlmacen(Constants.NOMBRE_ARCHIVO_ESCRITURA,almacen)) {
+                    if (GestionCSV.escribirAlmacen(Config.NOMBRE_ARCHIVO_ESCRITURA,almacen)) {
                         System.out.println("Almacén guardado.");
                     } else {
                         System.out.println("Imposible guardar almacén inexistente.");

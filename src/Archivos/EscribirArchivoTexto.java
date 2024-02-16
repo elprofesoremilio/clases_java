@@ -8,7 +8,7 @@ public class EscribirArchivoTexto {
 
         try {
             //pw = new PrintWriter(Constants.NOMBRE_ARCHIVO_ESCRITURA);
-            pw = new PrintWriter(new FileOutputStream(Constants.NOMBRE_ARCHIVO_ESCRITURA,true));
+            pw = new PrintWriter(new FileOutputStream(Config.NOMBRE_ARCHIVO_ESCRITURA,true));
 
             pw.println("Primera linea.");
             pw.println("Segunda linea.");
@@ -31,7 +31,7 @@ public class EscribirArchivoTexto {
         String linea;
 
         try {
-            fw = new FileWriter(Constants.NOMBRE_ARCHIVO_ESCRITURA);
+            fw = new FileWriter(Config.NOMBRE_ARCHIVO_ESCRITURA);
             bw = new BufferedWriter(fw);
 
             bw.write("todo lo que quiera");

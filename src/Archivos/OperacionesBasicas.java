@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class OperacionesBasicas {
     public static void main(String[] args) {
-        File file = new File(Constants.NOMBRE_ARCHIVO);
+        File file = new File(Config.NOMBRE_ARCHIVO);
 
         if (file.exists()) {
             System.out.println("Archivo encontrado");

@@ -9,7 +9,7 @@ public class LeerArchivoTextoCaracterACaracter {
     public static void main(String[] args) {
         FileReader fr = null;
         try {
-            fr = new FileReader(Constants.NOMBRE_ARCHIVO);
+            fr = new FileReader(Config.NOMBRE_ARCHIVO);
 
             int caracter = fr.read();
 

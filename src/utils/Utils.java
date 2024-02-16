@@ -10,4 +10,9 @@ public class Utils {
 
         return Integer.parseInt(opcion);
     }
+
+    public static void pulsaEnter() {
+        System.out.println("Pulse ENTER para continuar...");
+        scanner.nextLine();
+    }
 }

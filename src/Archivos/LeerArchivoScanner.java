@@ -8,7 +8,7 @@ public class LeerArchivoScanner {
     public static void main(String[] args) {
         Scanner file = null;
         try {
-            file = new Scanner(new File(Constants.NOMBRE_ARCHIVO));
+            file = new Scanner(new File(Config.NOMBRE_ARCHIVO));
             String linea;
 
             while (file.hasNextLine()) {

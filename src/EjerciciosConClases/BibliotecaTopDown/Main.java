@@ -71,7 +71,7 @@ public class Main {
     private static void addLibro(Biblioteca biblioteca) {
         System.out.println("Introduzca el título del nuevo libro: ");
         String titulo = sc.nextLine();
-        if (biblioteca.addLibro(titulo)) {
+        if (biblioteca.addLibro(titulo,1)) {
             System.out.println("Libro añadido correctamente.");
         }
     }

@@ -4,7 +4,7 @@ import java.io.File;
 
 public class OperacionesDirectorios {
     public static void main(String[] args) {
-        File file = new File(Constants.NOMBRE_CARPETA);
+        File file = new File(Config.NOMBRE_CARPETA);
 
         if (!file.isDirectory()) {
             System.out.println("EL archivo proporcionado no es una carpeta.");
