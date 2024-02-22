@@ -1,0 +1,18 @@
+@startuml
+
+class Gusano {
+     -anillos : List<Anillo>
+
+     +crecer() : void
+     +crecer(int pasos) : void
+}
+
+class Anillo {
+    -tipo : char
+
+    +duplicar() : Anillo
+}
+
+Gusano "1" *-- "n" Anillo
+
+@enduml
